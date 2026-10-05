@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ralph | Portfolio</title>
+    <meta
+      name="description"
+      content="IT student portfolio for Ralph with a professional navy and white design, plus yellow accents."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --navy: #172554;
+        --navy-deep: #0f172a;
+        --blue: #2563eb;
+        --yellow: #fbbf24;
+        --white: #f8fafc;
+        --slate: #64748b;
+        --ink: #0f172a;
+        --panel: #ffffff;
+        --panel-soft: #eef4ff;
+        --line: rgba(15, 23, 42, 0.12);
+        --muted: #475569;
+        --shadow: rgba(15, 23, 42, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        animation: fadeIn 0.7s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', Arial, sans-serif;
+        background: linear-gradient(180deg, var(--navy) 0%, #13214d 100%);
+        color: var(--ink);
+        line-height: 1.7;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(23, 37, 84, 0.88);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+      }
+
+      .brand {
+        font-weight: 600;
+        letter-spacing: 0.12rem;
+        text-transform: uppercase;
+        color: var(--white);
+        font-size: 0.95rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .brand span {
+        display: inline-block;
+        padding: 0.26rem 0.5rem;
+        background: var(--yellow);
+        color: var(--navy-deep);
+        margin-right: 0.55rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.95rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--yellow);
+      }
+
+      .hero {
+        padding: 5rem 0 3rem;
+      }
+
+      .hero-inner {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: clamp(2rem, 3vw, 3.2rem);
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.5rem 0.85rem;
+        background: rgba(251, 191, 36, 0.12);
+        border: 1px solid rgba(251, 191, 36, 0.25);
+        color: var(--yellow);
+        font-size: 0.78rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .eyebrow::before {
+        content: "★";
+        color: var(--yellow);
+        font-size: 0.8rem;
+      }
+
+      h1 {
+        margin: 1.4rem 0 0.8rem;
+        font-size: clamp(2.8rem, 4vw, 4.8rem);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+      }
+
+      .accent {
+        color: var(--yellow);
+      }
+
+      .subtitle {
+        margin: 0;
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+      }
+
+      .tagline {
+        margin: 0.9rem 0 2rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 560px;
+        font-size: 1.05rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0.9rem 1.4rem;
+        border-radius: 0;
+        border: 1px solid transparent;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.96rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px) scale(1.01);
+      }
+
+      .button.primary {
+        background: var(--blue);
+        color: var(--white);
+        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--white);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-card {
+        background: linear-gradient(180deg, #fbfdff 0%, #eef4ff 100%);
+        border: 1px solid rgba(23, 37, 84, 0.08);
+        padding: 1.25rem;
+        min-height: 420px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 160px;
+        height: 160px;
+        background: rgba(251, 191, 36, 0.16);
+        border-radius: 50%;
+      }
+
+      .mini-profile {
+        position: absolute;
+        inset: 1rem;
+        border: 1px solid rgba(23, 37, 84, 0.08);
+        background: linear-gradient(135deg, #ffffff 0%, #e8eefc 100%);
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .mini-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        align-self: flex-start;
+        background: rgba(251, 191, 36, 0.15);
+        color: var(--navy-deep);
+        padding: 0.45rem 0.7rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: 1px solid rgba(251, 191, 36, 0.4);
+      }
+
+      .mini-badge::before {
+        content: "✦";
+      }
+
+      .mini-name {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--navy-deep);
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .mini-role {
+        margin: 0.2rem 0 0;
+        color: var(--slate);
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+      }
+
+      .section {
+        padding: 2rem 0 5rem;
+      }
+
+      .section-shell {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: clamp(1.5rem, 2vw, 2.2rem);
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: end;
+        margin-bottom: 2rem;
+      }
+
+      .section-number {
+        color: var(--yellow);
+        font-size: 0.8rem;
+        letter-spacing: 0.12rem;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+
+      h2 {
+        margin: 0.5rem 0 0;
+        font-size: clamp(2.1rem, 2.2vw, 2.8rem);
+        letter-spacing: -0.05em;
+        color: var(--white);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+      }
+
+      .section-copy {
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 640px;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1.5rem;
+      }
+
+      .about-card,
+      .skills-card,
+      .experience-card,
+      .resume-card,
+      .contact-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 1.7rem;
+      }
+
+      .about-card p {
+        margin: 0 0 1rem;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      .about-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(110px, 1fr));
+        gap: 1rem;
+      }
+
+      .stat {
+        border: 1px solid var(--line);
+        background: var(--panel-soft);
+        padding: 1rem;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.8rem;
+        letter-spacing: -0.05em;
+        color: var(--navy-deep);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+      }
+
+      .stat span {
+        color: var(--slate);
+        font-size: 0.76rem;
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+
+      .skill {
+        padding: 0.7rem 0.9rem;
+        background: var(--panel-soft);
+        border: 1px solid rgba(37, 99, 235, 0.1);
+        color: var(--navy-deep);
+        font-weight: 600;
+        font-size: 0.92rem;
+        transition: transform 0.2s ease, background 0.2s ease;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .skill:hover {
+        transform: translateY(-2px);
+        background: rgba(251, 191, 36, 0.1);
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+
+      .project {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 1.3rem;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+
+      .project:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08);
+        border-color: rgba(251, 191, 36, 0.4);
+      }
+
+      .project-visual {
+        min-height: 200px;
+        background: linear-gradient(135deg, #eef4ff 0%, #dfeafc 100%);
+        border: 1px solid rgba(23, 37, 84, 0.08);
+        margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(251, 191, 36, 0.08));
+      }
+
+      .project h3 {
+        margin: 0 0 0.6rem;
+        font-size: 1.35rem;
+        letter-spacing: -0.04em;
+        color: var(--navy-deep);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+      }
+
+      .project p {
+        margin: 0 0 1rem;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .project-tag {
+        display: inline-block;
+        color: var(--navy-deep);
+        background: rgba(251, 191, 36, 0.14);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        padding: 0.38rem 0.6rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      .timeline-item:last-child {
+        border-bottom: none;
+      }
+
+      .timeline-date {
+        color: var(--yellow);
+        font-weight: 800;
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+
+      .timeline-content h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1.2rem;
+        color: var(--navy-deep);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+      }
+
+      .timeline-content p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .resume-box {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1.5rem;
+      }
+
+      .resume-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .resume-list li {
+        margin-bottom: 0.8rem;
+        color: var(--muted);
+        position: relative;
+        padding-left: 1.2rem;
+        font-size: 1rem;
+      }
+
+      .resume-list li::before {
+        content: "•";
+        color: var(--yellow);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .resume-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .contact-item {
+        background: var(--panel-soft);
+        border: 1px solid rgba(23, 37, 84, 0.08);
+        padding: 1.2rem;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(251, 191, 36, 0.4);
+      }
+
+      .contact-label {
+        color: var(--slate);
+        display: block;
+        font-size: 0.72rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        margin-bottom: 0.4rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .contact-value {
+        color: var(--navy-deep);
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .site-footer {
+        padding: 1.3rem 0 2.5rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        padding-top: 1rem;
+      }
+
+      @media (max-width: 900px) {
+        .intro,
+        .about-grid,
+        .resume-box,
+        .projects-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 0.8rem 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-bottom: 0.4rem;
+        }
+
+        .hero-card {
+          min-height: 300px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .site-header {
+          position: static;
+        }
+
+        .hero {
+          padding-top: 2.5rem;
+        }
+
+        .nav-links {
+          gap: 0.8rem 1rem;
+          font-size: 0.82rem;
+        }
+
+        h1 {
+          font-size: 2.6rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+
+        .tagline,
+        .about-card p,
+        .project p,
+        .resume-list li {
+          font-size: 0.95rem;
+        }
+
+        .section-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .cta-row,
+        .resume-buttons {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .hero-inner,
+        .section-shell,
+        .contact-card,
+        .about-card,
+        .skills-card,
+        .experience-card,
+        .resume-card,
+        .project {
+          padding: 1rem;
+        }
+
+        .mini-name {
+          font-size: 1.2rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="brand"><span>R</span>Ralph</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="intro">
+            <div>
+              <div class="eyebrow">Available for Internship</div>
+              <h1>
+                Hi, I’m Ralph <span class="accent">👋</span>
+              </h1>
+              <p class="subtitle">2nd Year IT Student &amp; Aspiring IT Professional</p>
+              <p class="tagline">
+                Hardworking, optimistic, and always willing to learn. I enjoy building solutions,
+                understanding systems, and growing my skills in technology through practical projects.
+              </p>
+              <div class="cta-row">
+                <a class="button primary" href="#projects">View My Projects</a>
+                <a class="button secondary" href="#contact">Contact Me</a>
+              </div>
+            </div>
+
+            <div class="hero-card" aria-label="Profile card">
+              <div class="mini-profile">
+                <div class="mini-badge">Student</div>
+                <div class="mini-name">Ralph</div>
+                <p class="mini-role">IT • Web • Database • Java</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container section-shell">
+          <div class="section-head">
+            <div>
+              <div class="section-number">01 — About Me</div>
+              <h2>Driven by curiosity and growth.</h2>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <p>
+                I’m a second-year IT student with a strong interest in software development, web
+                technologies, databases, and practical problem-solving. I enjoy learning by building,
+                experimenting, and applying technology to real situations.
+              </p>
+              <p>
+                I am hardworking, optimistic, and always ready to improve my skills through school
+                projects, collaboration, and new learning opportunities. I want to continue growing
+                as a future IT professional and contribute to meaningful work.
+              </p>
+            </div>
+
+            <div class="skills-card">
+              <div class="stats">
+                <div class="stat">
+                  <strong>2nd</strong>
+                  <span>Year IT</span>
+                </div>
+                <div class="stat">
+                  <strong>100%</strong>
+                  <span>Growth Mindset</span>
+                </div>
+                <div class="stat">
+                  <strong>6+</strong>
+                  <span>Tools</span>
+                </div>
+                <div class="stat">
+                  <strong>∞</strong>
+                  <span>Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container section-shell">
+          <div class="section-head">
+            <div>
+              <div class="section-number">02 — Skills</div>
+              <h2>Technology I’m building with.</h2>
+            </div>
+          </div>
+
+          <div class="skills-card">
+            <div class="skills-list">
+              <span class="skill">Java</span>
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">MySQL</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Git/GitHub</span>
+              <span class="skill">Microsoft Office</span>
+              <span class="skill">Problem Solving</span>
+              <span class="skill">Teamwork</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container section-shell">
+          <div class="section-head">
+            <div>
+              <div class="section-number">03 — Projects</div>
+              <h2>School projects and IT activities.</h2>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project">
+              <div class="project-visual" aria-label="Java project preview"></div>
+              <h3>Java Programming Project</h3>
+              <p>
+                Created a simple Java-based application to solve a real-world task with efficient logic,
+                structure, and user-friendly output.
+              </p>
+              <span class="project-tag">Java</span>
+            </article>
+
+            <article class="project">
+              <div class="project-visual" aria-label="Database project preview"></div>
+              <h3>Database System Project</h3>
+              <p>
+                Designed and worked with database-driven records, tables, and queries to manage data
+                in a clean and organized way.
+              </p>
+              <span class="project-tag">MySQL</span>
+            </article>
+
+            <article class="project">
+              <div class="project-visual" aria-label="Web project preview"></div>
+              <h3>Web Development Activity</h3>
+              <p>
+                Built front-end pages using HTML, CSS, and JavaScript to create accessible and visually
+                organized digital experiences.
+              </p>
+              <span class="project-tag">Web</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container section-shell">
+          <div class="section-head">
+            <div>
+              <div class="section-number">04 — Experience / Education</div>
+              <h2>Building a strong technical foundation.</h2>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2024 – Present</div>
+                <div class="timeline-content">
+                  <h3>2nd Year IT Student</h3>
+                  <p>Focused on programming, database systems, web development, and practical IT skills.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">School Projects</div>
+                <div class="timeline-content">
+                  <h3>Academic and Group Activities</h3>
+                  <p>Participated in hands-on assignments involving Java, databases, and digital tasks.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">Growth</div>
+                <div class="timeline-content">
+                  <h3>Continuous Learning</h3>
+                  <p>Committed to improving through coursework, projects, and real-world technology learning.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section">
+        <div class="container section-shell">
+          <div class="section-head">
+            <div>
+              <div class="section-number">05 — Resume</div>
+              <h2>Professional summary and background.</h2>
+            </div>
+          </div>
+
+          <div class="resume-box">
+            <div class="resume-card">
+              <ul class="resume-list">
+                <li>Second-year IT student with growing skills in Java, web development, and databases.</li>
+                <li>Interested in internships and practical experience in IT and software-related work.</li>
+                <li>Strong work ethic, willingness to learn, and positive attitude toward teamwork.</li>
+                <li>Comfortable with basic office tools and digital productivity applications.</li>
+              </ul>
+            </div>
+
+            <div class="resume-card">
+              <p style="margin-top: 0; color: var(--muted);">
+                I am seeking opportunities to grow, contribute, and strengthen my technical skills in a
+                professional environment.
+              </p>
+              <div class="resume-buttons">
+                <a class="button primary" href="resume.html" target="_blank" rel="noreferrer">View Resume</a>
+                <a class="button secondary" href="resume.html" download>Download Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container section-shell">
+          <div class="section-head">
+            <div>
+              <div class="section-number">06 — Contact Me</div>
+              <h2>Let’s connect and learn together.</h2>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">ralph@example.com</span>
+            </div>
+            <div class="contact-card">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/ralph</span>
+            </div>
+            <div class="contact-card">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/ralph</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>© 2026 Ralph</div>
+        <div>Hardworking, optimistic, and ready to grow.</div>
+      </div>
+    </footer>
+  </body>
+</html>

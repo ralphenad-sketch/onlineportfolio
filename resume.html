@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ralph | Resume</title>
+    <style>
+      :root {
+        --navy: #172554;
+        --blue: #2563eb;
+        --yellow: #fbbf24;
+        --white: #f8fafc;
+        --slate: #64748b;
+        --ink: #0f172a;
+        --line: rgba(15, 23, 42, 0.12);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--white);
+        color: var(--ink);
+        line-height: 1.7;
+      }
+
+      .page {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 32px;
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      .header {
+        border-bottom: 2px solid var(--yellow);
+        padding-bottom: 18px;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.3rem;
+        letter-spacing: -0.05em;
+        color: var(--navy);
+      }
+
+      .role {
+        margin: 8px 0 0;
+        color: var(--blue);
+        font-weight: 700;
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      .contact {
+        margin-top: 12px;
+        color: var(--slate);
+        font-size: 0.96rem;
+      }
+
+      .section {
+        margin-bottom: 26px;
+      }
+
+      .section h2 {
+        margin: 0 0 12px;
+        color: var(--navy);
+        font-size: 1.18rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 6px;
+      }
+
+      .content {
+        color: #334155;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin: 0 8px 8px 0;
+        padding: 0.4rem 0.7rem;
+        background: rgba(251, 191, 36, 0.14);
+        border: 1px solid rgba(251, 191, 36, 0.4);
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 700px) {
+        .page {
+          padding: 24px 18px;
+          margin: 20px auto;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Ralph</h1>
+        <div class="role">2nd Year IT Student</div>
+        <div class="contact">Email: ralph@example.com | GitHub: github.com/ralph | LinkedIn: linkedin.com/in/ralph</div>
+      </header>
+
+      <section class="section">
+        <h2>Profile</h2>
+        <div class="content">
+          Hardworking and optimistic IT student with a growing interest in programming, web development,
+          and database systems. Eager to learn, build practical solutions, and contribute to a professional team.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Skills</h2>
+        <div class="content">
+          <span class="tag">Java</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag">Microsoft Office</span>
+          <span class="tag">Problem Solving</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="section">
+          <h2>Education</h2>
+          <div class="content">
+            <strong>2nd Year IT Student</strong><br />
+            Studying IT with focus on programming, web systems, and database management.
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Projects</h2>
+          <div class="content">
+            <ul>
+              <li>Java program development</li>
+              <li>Database project work</li>
+              <li>Web development activities</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="section">
+        <h2>Strengths</h2>
+        <div class="content">
+          <ul>
+            <li>Quick learner and eager to improve</li>
+            <li>Positive attitude and strong work ethic</li>
+            <li>Comfortable with teamwork and school-based projects</li>
+            <li>Motivated to gain practical IT experience</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
