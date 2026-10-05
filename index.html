@@ -235,7 +235,7 @@
         background: linear-gradient(180deg, #fbfdff 0%, #eef4ff 100%);
         border: 1px solid rgba(23, 37, 84, 0.08);
         padding: 1.25rem;
-        min-height: 420px;
+        min-height: 500px;
         position: relative;
         overflow: hidden;
       }
@@ -255,11 +255,29 @@
         position: absolute;
         inset: 1rem;
         border: 1px solid rgba(23, 37, 84, 0.08);
+        overflow: hidden;
         background: linear-gradient(135deg, #ffffff 0%, #e8eefc 100%);
-        padding: 1.2rem;
+      }
+
+      .mini-profile-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 12%;
+        filter: saturate(0.9) contrast(1.05);
+      }
+
+      .mini-profile-content {
+        position: relative;
+        z-index: 1;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        padding: 1.2rem;
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.12), rgba(15, 23, 42, 0.7));
       }
 
       .mini-badge {
@@ -268,7 +286,7 @@
         gap: 0.4rem;
         align-self: flex-start;
         background: rgba(251, 191, 36, 0.15);
-        color: var(--navy-deep);
+        color: white;
         padding: 0.45rem 0.7rem;
         font-size: 0.72rem;
         letter-spacing: 0.1rem;
@@ -286,13 +304,13 @@
         font-size: 1.7rem;
         font-weight: 700;
         letter-spacing: -0.04em;
-        color: var(--navy-deep);
+        color: white;
         font-family: 'Poppins', sans-serif;
       }
 
       .mini-role {
         margin: 0.2rem 0 0;
-        color: var(--slate);
+        color: white;
         letter-spacing: 0.08rem;
         text-transform: uppercase;
         font-size: 0.72rem;
@@ -431,22 +449,6 @@
         transform: translateY(-6px);
         box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08);
         border-color: rgba(251, 191, 36, 0.4);
-      }
-
-      .project-visual {
-        min-height: 200px;
-        background: linear-gradient(135deg, #eef4ff 0%, #dfeafc 100%);
-        border: 1px solid rgba(23, 37, 84, 0.08);
-        margin-bottom: 1rem;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .project-visual::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(251, 191, 36, 0.08));
       }
 
       .project h3 {
@@ -708,12 +710,12 @@
             <div>
               <div class="eyebrow">Available for Internship</div>
               <h1>
-                Hi! , I’m Ralph <span class="accent">👋</span>
+                Hi, I’m Ralph Garilao <span class="accent">👋</span>
               </h1>
-              <p class="subtitle">2nd Year IT Student &amp; Aspiring IT Professional</p>
+              <p class="subtitle">2nd Year IT Student | Aspiring Web &amp; Database Developer</p>
               <p class="tagline">
-                Hardworking, optimistic, and always willing to learn. I enjoy building solutions,
-                understanding systems, and growing my skills in technology through practical projects.
+                Hardworking, optimistic, and eager to learn. I enjoy building practical solutions,
+                understanding systems, and growing my technical skills through hands-on projects and coursework.
               </p>
               <div class="cta-row">
                 <a class="button primary" href="#projects">View My Projects</a>
@@ -723,9 +725,12 @@
 
             <div class="hero-card" aria-label="Profile card">
               <div class="mini-profile">
-                <div class="mini-badge">Student</div>
-                <div class="mini-name">Ralph</div>
-                <p class="mini-role">IT • Web • Database • Java</p>
+                <img class="mini-profile-image" src="picture/download (2).jpg" alt="Ralph Garilao" />
+                <div class="mini-profile-content">
+                  <div class="mini-badge">Student</div>
+                  <div class="mini-name">Ralph Garilao</div>
+                  <p class="mini-role">Web • Database • Java</p>
+                </div>
               </div>
             </div>
           </div>
@@ -744,14 +749,15 @@
           <div class="about-grid">
             <div class="about-card">
               <p>
-                I’m a second-year IT student with a strong interest in software development, web
-                technologies, databases, and practical problem-solving. I enjoy learning by building,
-                experimenting, and applying technology to real situations.
+                My name is Ralph Enad Garilao. I am a 2nd-year college student taking BSIT at
+STI College of Ormoc.  I am interested in learning new things, improving my skills, and
+gaining more experience related to my course.
+
               </p>
               <p>
-                I am hardworking, optimistic, and always ready to improve my skills through school
-                projects, collaboration, and new learning opportunities. I want to continue growing
-                as a future IT professional and contribute to meaningful work.
+                I  consider myself a hardworking and responsible student. I am still developing
+my skills and knowledge, and I am willing to learn from my experiences and
+challenges
               </p>
             </div>
 
@@ -759,7 +765,7 @@
               <div class="stats">
                 <div class="stat">
                   <strong>2nd</strong>
-                  <span>Year IT</span>
+                  <span>Year</span>
                 </div>
                 <div class="stat">
                   <strong>100%</strong>
@@ -790,15 +796,18 @@
 
           <div class="skills-card">
             <div class="skills-list">
-              <span class="skill">Java</span>
-              <span class="skill">HTML</span>
-              <span class="skill">CSS</span>
-              <span class="skill">MySQL</span>
-              <span class="skill">JavaScript</span>
-              <span class="skill">Git/GitHub</span>
-              <span class="skill">Microsoft Office</span>
+              <span class="skill">Basic Java Programming</span>
+              <span class="skill">Basic Computer Skills</span>
+              <span class="skill">Microsoft Word</span>
+              <span class="skill">Microsoft PowerPoint</span>
+              <span class="skill">Microsoft Excel</span>
               <span class="skill">Problem Solving</span>
+              <span class="skill">Communication</span>
               <span class="skill">Teamwork</span>
+              <span class="skill">Time Management</span>
+              <span class="skill">Basic Graphic Design</span>
+              <span class="skill">Web Development</span>
+              <span class="skill">Data Collection</span>
             </div>
           </div>
         </div>
@@ -815,33 +824,30 @@
 
           <div class="projects-grid">
             <article class="project">
-              <div class="project-visual" aria-label="Java project preview"></div>
-              <h3>Java Programming Project</h3>
+              <h3>Project 1: ToDoList</h3>
               <p>
-                Created a simple Java-based application to solve a real-world task with efficient logic,
-                structure, and user-friendly output.
+                It is a to-do list for students and teachers who want to track their tasks, arrange them,
+                and be reminded about what needs to be done.
               </p>
-              <span class="project-tag">Java</span>
+              <span class="project-tag">Productivity</span>
             </article>
 
             <article class="project">
-              <div class="project-visual" aria-label="Database project preview"></div>
-              <h3>Database System Project</h3>
+              <h3>Project 2: Grocery Delivery App (Codefest)</h3>
               <p>
-                Designed and worked with database-driven records, tables, and queries to manage data
-                in a clean and organized way.
+                Making grocery shopping much easier by adding items to the cart and delivering them directly
+                to your home.
               </p>
-              <span class="project-tag">MySQL</span>
+              <span class="project-tag">E-Commerce</span>
             </article>
 
             <article class="project">
-              <div class="project-visual" aria-label="Web project preview"></div>
-              <h3>Web Development Activity</h3>
+              <h3>Project 3: Event Organizer (Codefest)</h3>
               <p>
-                Built front-end pages using HTML, CSS, and JavaScript to create accessible and visually
-                organized digital experiences.
+                An event organizer where you can create and delete events, and register students who want to
+                participate in a specific event.
               </p>
-              <span class="project-tag">Web</span>
+              <span class="project-tag">Events</span>
             </article>
           </div>
         </div>
@@ -851,7 +857,7 @@
         <div class="container section-shell">
           <div class="section-head">
             <div>
-              <div class="section-number">04 — Experience / Education</div>
+              <div class="section-number">04 — Education</div>
               <h2>Building a strong technical foundation.</h2>
             </div>
           </div>
@@ -859,26 +865,26 @@
           <div class="experience-card">
             <div class="timeline">
               <div class="timeline-item">
-                <div class="timeline-date">2024 – Present</div>
+                <div class="timeline-date">2025</div>
                 <div class="timeline-content">
-                  <h3>2nd Year IT Student</h3>
-                  <p>Focused on programming, database systems, web development, and practical IT skills.</p>
+                  <h3>College</h3>
+                  <p>STI College of Ormoc<br />Bachelor of Science in Information Technology</p>
                 </div>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">School Projects</div>
+                <div class="timeline-date">2023 – 2025</div>
                 <div class="timeline-content">
-                  <h3>Academic and Group Activities</h3>
-                  <p>Participated in hands-on assignments involving Java, databases, and digital tasks.</p>
+                  <h3>Senior High School</h3>
+                  <p>STI College of Ormoc<br />ICT - Mobile App and Web Development</p>
                 </div>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">Growth</div>
+                <div class="timeline-date">2019 – 2023</div>
                 <div class="timeline-content">
-                  <h3>Continuous Learning</h3>
-                  <p>Committed to improving through coursework, projects, and real-world technology learning.</p>
+                  <h3>Junior High School</h3>
+                  <p>New Ormoc City National High School</p>
                 </div>
               </div>
             </div>
@@ -898,10 +904,8 @@
           <div class="resume-box">
             <div class="resume-card">
               <ul class="resume-list">
-                <li>Second-year IT student with growing skills in Java, web development, and databases.</li>
-                <li>Interested in internships and practical experience in IT and software-related work.</li>
-                <li>Strong work ethic, willingness to learn, and positive attitude toward teamwork.</li>
-                <li>Comfortable with basic office tools and digital productivity applications.</li>
+                <p>
+I, Ralph E. Garilao a dedicated 2nd-year student with technical skills who is looking for a job to gain professional experience. I studied at New Ormoc City National High School and STI College Ormoc, where I earned a diploma. Also completed TESDA training and earned a Microsoft Azure Certification in 2026. My skills include organizing, multitasking, data collection, basic Java, HTML, CSS, Microsoft Word, and Android Studio. I completed this work immersion at STI College Ormoc and am willing to learn and develop my skills in a professional work environment.                </p>
               </ul>
             </div>
 
@@ -931,15 +935,17 @@
           <div class="contact-grid">
             <div class="contact-card">
               <span class="contact-label">Email</span>
-              <span class="contact-value">ralph@example.com</span>
+              <span class="contact-value">ralphenad@gmail.com</span>
             </div>
             <div class="contact-card">
               <span class="contact-label">GitHub</span>
-              <span class="contact-value">github.com/ralph</span>
+              <span class="contact-value">github.com/ralphenad-sketch</span>
             </div>
             <div class="contact-card">
               <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">linkedin.com/in/ralph</span>
+              <span class="contact-value">linkedin.com/in/
+ralph-garilao-395177441
+</span>
             </div>
           </div>
         </div>
